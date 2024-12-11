@@ -1,6 +1,6 @@
 # Entrada e Saída em C
 
-Este repositório contém exercícios e soluções relacionados à manipulação de entrada e saída na linguagem C. O objetivo é fornecer exemplos práticos e eficientes para leitura, escrita e formatação de dados, além de manipulação de arquivos e strings.
+Este repositório contém soluções relacionadas à manipulação de entrada e saída na linguagem C. O objetivo é fornecer exemplos práticos e eficientes para leitura, escrita e formatação de dados, além de manipulação de arquivos e strings.
 
 ## Descrição
 
