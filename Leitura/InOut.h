@@ -8,12 +8,22 @@
 
 /*
 
-    - Todas funcoes abaixo realizam a leitura de dados, porem faremos alguns testes com valores inesperadoos
+    - Todas funcoes abaixo realizam a leitura de dados, porem faremos alguns testes com valores inesperados
      e deixaremos registrados os resultados comentados para algumas possibilidades invalidas.
 
     - Posteriormente, iremos melhorar as funcoes para torna-las mais robustas usando boas praticas de programacao
 
 */
+
+
+void CleanBufferStdin(){
+
+    int buffer;
+
+    while((buffer = getchar()) != '\n');
+}
+
+
 
 //----------------------------------------------------Funcoes iniciais
 

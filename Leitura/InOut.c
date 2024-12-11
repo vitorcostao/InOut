@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include "InOut.h"
 
-/**
+/** Indices
 
  1 - Leitura de inteiros
  2 - Leitura de reais
@@ -14,36 +14,40 @@
 
 void m1(){
 
-    int n = readInt2();
+    int n = readInt();
+    CleanBufferStdin();
     printf("Inteiro: %d", n);
-    //n = readInt();
+    //n = readInt2();
     //printf("Inteiro: %d", n);
 
 }
 
 void m2(){
 
-    float n = readFloat2();
+    float n = readFloat();
+    CleanBufferStdin();
     printf("Real: %.2f", n);
-    //n = readFloat();
+    //n = readFloat2();
     //printf("Real: %.2f", n);
 
 }
 
 void m3(){
 
-    char n = readChar2();
+    char n = readChar();
+    CleanBufferStdin();
     printf("Caractere: %c", n);
-    //n = readChar();
+    //n = readChar2();
     //printf("Caractere: %c", n);
 
 }
 
 void m4(){
 
-    char* n = readString2(); //OBS: Maximo 100 caracteres
+    char* n = readString(); //OBS: Maximo 100 caracteres
+    CleanBufferStdin();
     printf("String: %s", n);
-    //n = readString();
+    //n = readString2();
     //printf("String: %s", n);
 
 }
@@ -65,7 +69,7 @@ int main(){
 }
 
 
-/**
+/** Analises
 
 DETALHE: Digitar letras em leitura de numeros resulta em 0, o que e valido.
          Por isso, demonstracoes em que sao inseridas letras em testes de numeros,
@@ -115,5 +119,9 @@ Teste posterior(3):
 
         - OBS: Com o buffer limpo, e possivel realizar a leitura de dados das outras funcoes, visto
                que nao ha dados no buffer de entrada para o scanf tentar ler. Entradas bem sucedidas.
+
+
+---> A funcao CleanBufferStdin() limpa todo o buffer de entrada. O getchar limpa um unico caractere, por isso
+     tal funcao verifica a existencia dos caracteres ate o '\n' para saber ate onde o buffer ira ser limpo.
 
 */
