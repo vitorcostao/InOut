@@ -11,10 +11,11 @@
     - Todas funcoes abaixo realizam a leitura de dados, porem faremos alguns testes com valores inesperadoos
      e deixaremos registrados os resultados comentados para algumas possibilidades invalidas.
 
-    - Posteriormente, iremos corrigir as funcoes para torna-las mais robustas usando boas praticas de programacao
+    - Posteriormente, iremos melhorar as funcoes para torna-las mais robustas usando boas praticas de programacao
 
 */
 
+//----------------------------------------------------Funcoes iniciais
 
 int readInt(){
 
@@ -24,8 +25,6 @@ int readInt(){
     printf("\n\nDigite um valor: ");
     scanf("%d", &n);
     getchar();
-
-    while(getchar() != '\n');
 
     return n;
 }
@@ -65,5 +64,63 @@ char* readString(){
 
     return n;
 }
+
+
+//----------------------------------------------------Funcoes melhoradas
+
+int readInt2(){
+
+    //Definir dados
+    int n;
+
+    printf("\n\nDigite um valor: ");
+    scanf("%d", &n);
+    getchar();
+
+    while(getchar() != '\n'); //Limpa dados adicionais digitado pelo usuario
+
+    return n;
+}
+
+float readFloat2(){
+
+    //Definir dados
+    float n;
+
+    printf("\n\nDigite um valor: ");
+    scanf("%f", &n);
+    getchar();
+
+    while(getchar() != '\n'); //Limpa dados adicionais digitado pelo usuario
+
+    return n;
+}
+
+char readChar2(){
+
+    //Definir dados
+    char n;
+
+    printf("\n\nDigite uma letra: ");
+    scanf(" %c", &n);
+    getchar();
+
+    while(getchar() != '\n'); //Limpa dados adicionais digitado pelo usuario
+
+    return n;
+}
+
+char* readString2(){
+
+    //Definir dados
+    char* n = (char*)malloc(100 * sizeof(char));
+
+    printf("\n\nDigite uma palavra: ");
+    fgets(n, 100, stdin);
+    n[strcspn(n, "\n")] = '\0';
+
+    return n;
+}
+
 
 #endif // INOUT_H

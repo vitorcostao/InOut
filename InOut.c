@@ -8,39 +8,55 @@
  3 - Leitura de caracteres
  4 - Leitura de Strings
 
+ -----> COMENTARIOS DEPOIS DA MAIN
+
 */
 
 void m1(){
 
-    int n = readInt();
+    int n = readInt2();
     printf("Inteiro: %d", n);
+    //n = readInt();
+    //printf("Inteiro: %d", n);
 
 }
 
 void m2(){
 
-    float n = readFloat();
+    float n = readFloat2();
     printf("Real: %.2f", n);
+    //n = readFloat();
+    //printf("Real: %.2f", n);
+
 }
 
 void m3(){
 
-    char n = readChar();
+    char n = readChar2();
     printf("Caractere: %c", n);
+    //n = readChar();
+    //printf("Caractere: %c", n);
+
 }
 
 void m4(){
 
-    char* n = readString(); //OBS: Maximo 100 caracteres
+    char* n = readString2(); //OBS: Maximo 100 caracteres
     printf("String: %s", n);
+    //n = readString();
+    //printf("String: %s", n);
+
 }
 
 int main(){
 
     //Teste inicial
     m1();
+    printf("\n");
     m2();
+    printf("\n");
     m3();
+    printf("\n");
     m4();
 
     printf("\n");
@@ -51,6 +67,11 @@ int main(){
 
 /**
 
+DETALHE: Digitar letras em leitura de numeros resulta em 0, o que e valido.
+         Por isso, demonstracoes em que sao inseridas letras em testes de numeros,
+         saida 0 sera validada.
+
+         !OK -> Caso entrada seja '!' ou resultado inesperado.
 
 Teste inicial:
 
@@ -62,8 +83,8 @@ Teste inicial:
 
 Teste posterior(1):
 
-        1) Entrada: a    / Saida: 0    -> !OK
-        1) Entrada: a    / Saida: 0.00 -> !OK
+        1) Entrada: a    / Saida: 0    -> OK
+        1) Entrada: a    / Saida: 0.00 -> OK
         1) Entrada: a    / Saida: a    -> OK
         1) Entrada: a    / Saida: a    -> OK
 
@@ -73,10 +94,10 @@ Teste posterior(1):
 
 Teste posterior(2):
 
-        1) Entrada: abcd    / Saida: 0     -> !OK
+        1) Entrada: abcd    / Saida: 0     -> OK
         1) Entrada: !       / Saida: 0.00  -> !OK
-        1) Entrada: !       / Saida: c     -> OK
-        1) Entrada: !       / Saida: ""    -> !OK
+        1) Entrada: !       / Saida: c     -> !OK
+        1) Entrada: !       / Saida: ""    -> !OK ---> Sem entrada e saida NULL
 
         - OBS: Ao digitar "abcd" em uma funcao que espera um numero, a função - scanf - falha e deixa
                os caracteres restantes "abcd" no buffer de entrada. Isso pode causar problemas nas
@@ -84,6 +105,15 @@ Teste posterior(2):
                em comportamentos inesperados.
                Para evitar isso, e necessario limpar o buffer de entrada apos uma falha de leitura.
 
-        - OBS:
+
+Teste posterior(3):
+
+        1) Entrada: abcd    / Saida: 0     -> OK
+        1) Entrada: abcd    / Saida: 0.00  -> OK
+        1) Entrada: abcd    / Saida: a     -> OK ---> Primeiro caractere na string
+        1) Entrada: abcd    / Saida: abcd  -> OK
+
+        - OBS: Com o buffer limpo, e possivel realizar a leitura de dados das outras funcoes, visto
+               que nao ha dados no buffer de entrada para o scanf tentar ler. Entradas bem sucedidas.
 
 */
