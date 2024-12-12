@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 
-/**
+/** Saida de dados
 
  Formatacao de dados: Uso da funcao printf bem como seus possiveis parametros
 
@@ -70,11 +70,12 @@ int main(){
 
 /** Analises
 
-DETALHE: O especificador de formato (%) trabalha o tipo de dados referente sera usado nas funcoes
+DETALHE: O especificador de formato (%) trabalha o tipo de dados referente sera usado nas funcoes:
          - %d: Inteiro
          - %f: Real
          - %c: Caractere
          - %s: String
+
 
 Teste sem inicializar:
 
@@ -89,9 +90,9 @@ Teste inicial:
 Teste posterior(1):
 
         Imprimindo formatadores errados!
-        - Cada tipo de dado ocupa um espaco na memoria
-        - Imprimir formatador errado gera comportamentos estranhos
-        - Usar %d em %c e vice versa, imprime o valor na tabela ASCII
+        - Cada tipo de dado ocupa um espaco na memoria.
+        - Imprimir formatador errado gera comportamentos estranhos.
+        - Usar %d em %c e vice versa, imprime o valor na tabela ASCII.
 
         1) Saida(%d -> %f): Indefinido -> !OK
         2) Saida(%f -> %d): Indefinido -> !OK
@@ -99,8 +100,6 @@ Teste posterior(1):
         4) Saida(%f -> %s): Indefinido -> !OK
 
 
-Nao comentado:
-
-        Algumas das formatacoes utilizadas!
+--->A parte nao comentada mostra algumas das formatacoes mais utilizadas!
 
 */
